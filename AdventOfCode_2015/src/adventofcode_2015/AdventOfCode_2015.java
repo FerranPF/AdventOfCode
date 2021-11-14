@@ -17,8 +17,8 @@ public class AdventOfCode_2015 {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        Day3 day = new Day3();
-        day.PresentHouseRobot();
+        Day4 day = new Day4();
+        day.LowestPositiveMD5();
     }
     
 }
