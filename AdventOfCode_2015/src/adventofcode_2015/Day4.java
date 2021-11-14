@@ -13,13 +13,25 @@ import javax.xml.bind.DatatypeConverter;
  *
  * @author Ferran
  */
-public class Day4 {
+public class Day4 extends Day{
+    
+    int zeroLength = 0;
+    
+    @Override
+    void main() {
+        System.out.println("Day 4 Part 1:");
+        this.zeroLength = 5;
+        this.LowestPositiveMD5();
+        
+        System.out.println("Day 4 Part 2:");
+        this.zeroLength = 6;
+        this.LowestPositiveMD5();
+    }
     
     public void LowestPositiveMD5(){
         String password = "yzbqklnj";
         int numbers = 1;
         String myHash = "";
-        final int zeroLength = 6;
         
         try {
             MessageDigest md = MessageDigest.getInstance("MD5");

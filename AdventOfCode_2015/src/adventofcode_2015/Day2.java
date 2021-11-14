@@ -14,7 +14,14 @@ import java.util.Scanner;
  *
  * @author Ferran
  */
-public class Day2 {
+public class Day2 extends Day{
+    
+    @Override
+    void main() {
+        this.CalculateWrapPaper();
+        this.RibbonLength();
+    }
+    
     public void CalculateWrapPaper(){
         System.out.println("Day 2 Part 1:");
         int wrapCount = 0;

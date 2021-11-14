@@ -13,7 +13,13 @@ import java.util.Scanner;
  *
  * @author Ferran
  */
-public class Day3 {
+public class Day3 extends Day{
+    
+    @Override
+    void main() {
+        this.PresentHouse();
+        this.PresentHouseRobot();
+    }
     
     public void PresentHouse(){
         System.out.println("Day 3 Part 1:");
@@ -50,10 +56,7 @@ public class Day3 {
                     }
                     
                     //Check house position
-                    if(positions[actualPosX+offset][actualPosY+offset] == 1){
-                        System.out.println("Already visited house.");
-                    }else{
-                        System.out.println("New house!");
+                    if(positions[actualPosX+offset][actualPosY+offset] != 1){
                         positions[actualPosX+offset][actualPosY+offset] = 1;
                         houseCount++;
                     }
@@ -61,7 +64,7 @@ public class Day3 {
                 }
             }
             
-            System.out.println("Houses: " + houseCount);
+            System.out.println("Houses visited: " + houseCount);
             myReader.close();
             
           } catch (FileNotFoundException e) {
@@ -71,7 +74,7 @@ public class Day3 {
     }
     
     public void PresentHouseRobot(){
-        System.out.println("Day 3 Part 1:");
+        System.out.println("Day 3 Part 2:");
         int houseCount = 1;
         final int offset = 1000;
         
@@ -125,18 +128,12 @@ public class Day3 {
                     }
                     
                     //Check house position
-                    if(positions[santaPosX+offset][santaPosY+offset] == 1){
-                        System.out.println("Already visited house.");
-                    }else{
-                        System.out.println("New house santa!");
+                    if(positions[santaPosX+offset][santaPosY+offset] != 1){
                         positions[santaPosX+offset][santaPosY+offset] = 1;
                         houseCount++;
                     }
                     
-                    if(positions[robotPosX+offset][robotPosY+offset] == 1){
-                        System.out.println("Already visited house.");
-                    }else{
-                        System.out.println("New house robot!");
+                    if(positions[robotPosX+offset][robotPosY+offset] != 1){
                         positions[robotPosX+offset][robotPosY+offset] = 1;
                         houseCount++;
                     }
@@ -144,7 +141,7 @@ public class Day3 {
                 }
             }
             
-            System.out.println("Houses: " + houseCount);
+            System.out.println("Houses visited: " + houseCount);
             myReader.close();
             
           } catch (FileNotFoundException e) {
