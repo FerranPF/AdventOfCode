@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package adventofcode_2021;
 
 import java.io.File;
@@ -14,10 +9,9 @@ import java.util.Scanner;
  *
  * @author Ferran
  */
-public class Day1 extends Day{
+public class Day1 implements Day{
 
-    @Override
-    void main() {
+    public void main() {
         this.CalculateDepthIncrease();
         this.CalculateDepthWindowIncrease();
     }

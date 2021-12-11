@@ -17,7 +17,7 @@ public class AdventOfCode_2021 {
     public static void main(String[] args) {
         // TODO code application logic here
         
-        Day day = new Day2();
+        Day day = new Day3();
         day.main();
     }
     
